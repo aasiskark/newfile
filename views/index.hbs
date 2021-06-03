@@ -1,0 +1,68 @@
+<html>
+    <div class="container">
+        <div class="row">
+             <div class="col-sm-8  topform">
+                 <form>
+                       <div class="form-row">
+                         <div class="form-group col-md-6">
+                           <label for="inputEmail4">Name</label>
+                           <input type="text" class="form-control" id="name" placeholder="Full Name">
+                         </div>
+                         <div class="form-group col-md-6">
+                           <label for="inputPassword4">Location</label>
+                           <input type="text" class="form-control" id="location" placeholder="location">
+                         </div>
+                         <div class="form-group col-md-6">
+                           <label for="inputPassword4">{{Age}}</label>
+                           <input type="text" class="form-control" id="age" placeholder="age">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label for="inputAddress">Email</label>
+                         <input type="email" class="form-control" id="email" placeholder="Email">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputAddress2">Phone </label>
+                         <input type="text" class="form-control" id="phone" placeholder="phone">
+                       </div>
+                       
+                       
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+
+               </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8  topform">
+                       <table class="table table-striped">
+                             <thead>
+                                 <tr class="bg-info">
+                                       <th scope="col">ID</th>
+                                       <th scope="col">Name</th>
+                                       <th scope="col">Age</th>
+                                       <th scope="col">Location</th>
+                                       <th scope="col">Phone</th>
+                                         <th scope="col">Email</th>
+                                  </tr>
+                              </thead>
+
+                              <tbody>
+                                {{#each users}}
+                                  <tr>
+                                       <th scope="row">{{this._id}}</th>
+                                       <td>{{this.name}}</td>
+                                       <td>{{this.age}}</td>
+                                       <td>{{this.location}}</td>
+                                       <td>{{this.Phone}}</td>
+                                       <td>{{this.email}}</td>
+                                  </tr>
+                                   {{/each}}  
+                              </tbody>
+                       </table>
+                </div>
+            </div>
+  </div>
+
+</html>
